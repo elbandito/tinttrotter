@@ -23,4 +23,4 @@ const TodoReducer = (state = initialState, action) => {
     }
 }
 
-export default TodoReducer;
+export default TodoReducer
