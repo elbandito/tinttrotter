@@ -14,6 +14,6 @@ const TodoItem = ({ value, onClick }) => {
 TodoItem.propTypes = {
     value: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired
-}
+};
 
 export default TodoItem;

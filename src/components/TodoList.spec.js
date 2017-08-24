@@ -1,7 +1,7 @@
-import React from 'react';
-import { mount } from 'enzyme';
-import { TodoList } from './TodoList';
-import TodoItem from './TodoItem';
+import React from 'react'
+import { mount } from 'enzyme'
+import { TodoList } from './TodoList'
+import TodoItem from './TodoItem'
 
 const setup = (todos = []) => {
     const props = {

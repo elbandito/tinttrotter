@@ -1,5 +1,5 @@
-import reducer from './TodoReducer';
-import * as actionTypes from '../actions/ActionTypes';
+import reducer from './TodoReducer'
+import * as actionTypes from '../actions/ActionTypes'
 
 describe('TodoReducer', () => {
 

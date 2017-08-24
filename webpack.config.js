@@ -12,17 +12,6 @@ module.exports = {
         path: path.join(__dirname, 'public'),
         filename: 'app.bundle.js'
     },
-    //resolve: {
-        //modulesDirectories: [
-        //    'node_modules',
-        //    'src'
-        //],
-    //    extensions: [
-    //        '',
-    //        '.js'
-    //    ]
-    //},
-
     resolve: {
         modules: [
             path.resolve('src'),

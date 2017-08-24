@@ -1,6 +1,6 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import TodoItem from './TodoItem';
+import React from 'react'
+import { shallow } from 'enzyme'
+import TodoItem from './TodoItem'
 
 const setup = (value) => {
     const props = {

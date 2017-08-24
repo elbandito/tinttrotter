@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { addTodo } from '../actions/TodoActions';
-import fetchFeed from '../actions/FeedActions';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { addTodo } from '../actions/TodoActions'
+import fetchFeed from '../actions/FeedActions'
 
 const AddTodoItem = ({ dispatch }) => {
 

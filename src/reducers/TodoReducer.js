@@ -9,7 +9,7 @@ const todo = (state, action) => {
         default:
             return state
     }
-}
+};
 
 const TodoReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -21,6 +21,6 @@ const TodoReducer = (state = initialState, action) => {
         default:
             return state
     }
-}
+};
 
-export default TodoReducer
+export default TodoReducer;

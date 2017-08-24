@@ -1,6 +1,8 @@
 import fetch from 'isomorphic-fetch'
 import * as types from './ActionTypes'
 
+const API_KEY = '27ec48c326a4acf16f392abe8733eada7492c7b3';
+
 const fetchFeedRequest = () => {
     console.log("feed request")
     return {
@@ -8,11 +10,11 @@ const fetchFeedRequest = () => {
     }
 };
 
-const fetchFeedSuccess = (body) => {
-    console.log(body);
+const fetchFeedSuccess = (data) => {
+    console.log(data);
     return {
         type: types.FETCH_FEED_SUCCESS,
-        body
+        data
     }
 };
 
@@ -27,9 +29,13 @@ const fetchFeed = () => {
     console.log("FETCH FEED");
     return dispatch => {
         dispatch(fetchFeedRequest());
-        return fetch('https://jsonplaceholder.typicode.com/posts/1')
+        return fetch(`https://api.tintup.com/v1/feed/leysin?api_token=${API_KEY}`)
             .then(res => res.json())
-            .then(json => dispatch(fetchFeedSuccess(json.body)))
+            .then(response => {
+                //console.log("ACTION");
+                //console.log(response);
+                dispatch(fetchFeedSuccess(response.data))
+            })
             .catch(ex => dispatch(fetchFeedFailure(ex)))
     }
 };
