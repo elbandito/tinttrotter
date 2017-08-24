@@ -5,26 +5,36 @@ import {Card, Icon} from 'semantic-ui-react'
 
 // class TodoList extends React.Component {
 
+const extra = (
+    <a>
+        <Icon name='user'/>
+        16 Friends
+    </a>
+);
+
 const FeedList = ({ feed }) => (
     <div>
-        <Card
-            image='/assets/images/avatar/large/elliot.jpg'
-            header='Elliot Baker'
-            meta='Friend'
-            description='Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat.'
-            extra={extra}
-        />
+        {
+            //console.log(feed);
+            feed.map((item, index) =>
+                <Card
+                    image={item.url}
+                    header={item.user_id}
+                    meta='Friend'
+                    description='Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat.'
+                    extra={extra}
+                    key={index}
+                />)
+        }
     </div>
 );
 
 FeedList.propTypes = {
-    todos: PropTypes.arrayOf(PropTypes.shape({
-        text: PropTypes.string.isRequired
-    }).isRequired).isRequired
+    feed: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired
 };
 
 const mapStateToProps = (state) => ({
-    todos: state.todos
+    feed: state.feed
 });
 
 export { FeedList };
