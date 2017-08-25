@@ -1,41 +1,58 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import {Card, Icon} from 'semantic-ui-react'
+import {Card, Icon, Image} from 'semantic-ui-react'
+import fetchFeed from '../actions/FeedActions'
 
-// class TodoList extends React.Component {
+class FeedList extends React.Component {
 
-const extra = (
-    <a>
-        <Icon name='user'/>
-        16 Friends
-    </a>
-);
+    componentDidMount() {
+        this.props.fetchFeed();
+    }
 
-const FeedList = ({ feed }) => (
-    <div>
-        {
-            //console.log(feed);
-            feed.map((item, index) =>
-                <Card
-                    image={item.url}
-                    header={item.user_id}
-                    meta='Friend'
-                    description='Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat.'
-                    extra={extra}
-                    key={index}
-                />)
-        }
-    </div>
-);
+    render() {
+        const image = (src, url) => (
+            <Image src={src} href={url}></Image>
+        );
+
+        const extra = (
+            <a>
+                <Icon name='user'/>
+                16 Friends
+            </a>
+        );
+
+        return (
+            <div>
+                {
+                    this.props.feed.map((item, index) =>
+                        <div key={`card-${index}`}>
+                            <Card
+                                image={image(item.image, item.url)}
+                                header={item.user_id}
+                                meta='Friend'
+                                description={item.title}
+                                extra={extra}
+                            /></div>)
+                }
+            </div>
+        );
+    }
+}
 
 FeedList.propTypes = {
-    feed: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired
+    feed: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 const mapStateToProps = (state) => ({
     feed: state.feed
 });
 
+const mapDispatchToProps = (dispatch) => {
+    return {
+        fetchFeed: () => dispatch(fetchFeed())
+    };
+};
+
 export { FeedList };
-export default connect(mapStateToProps)(FeedList);
+export default connect(mapStateToProps, mapDispatchToProps)(FeedList);

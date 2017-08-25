@@ -1,11 +1,9 @@
 import { combineReducers, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
-import todos from './TodoReducer'
 import feed from './FeedReducer'
 
-const TodoReducers = combineReducers({
-    todos,
+const Reducers = combineReducers({
     feed
 });
 
-export default TodoReducers;
+export default Reducers;
