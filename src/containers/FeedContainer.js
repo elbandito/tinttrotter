@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {Card, Icon, Image} from 'semantic-ui-react'
 import fetchFeed from '../actions/FeedActions'
-import '../style.scss';
+import '../stylesheets/style.scss';
 
-class FeedList extends React.Component {
+class FeedContainer extends React.Component {
 
     constructor(props) {
         super(props);
@@ -45,6 +45,7 @@ class FeedList extends React.Component {
         );
 
         const user = (author) => {
+            console.log(author);
             let authorJson = JSON.parse(author);
             return (
                 <div>
@@ -54,11 +55,12 @@ class FeedList extends React.Component {
             );
         };
 
+        console.log(this.props.feed[0]);
         return (
-            <div className='feeds'>
+            <div>
                 {
                     this.props.feed.map((item, index) =>
-                        <div key={`card-${index}`} className='card_item'>
+                        <div key={`card-${index}`}>
                             <Card
                                 image={image(item.image, item.url)}
                                 header={item.user_id}
@@ -72,7 +74,7 @@ class FeedList extends React.Component {
     }
 }
 
-FeedList.propTypes = {
+FeedContainer.propTypes = {
     feed: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
@@ -86,5 +88,5 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
-export { FeedList };
-export default connect(mapStateToProps, mapDispatchToProps)(FeedList);
+export { FeedContainer };
+export default connect(mapStateToProps, mapDispatchToProps)(FeedContainer);

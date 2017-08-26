@@ -1,12 +1,11 @@
 import React from 'react'
-import FeedList from './FeedList'
-import AddTodoItem from '../containers/AddTodoItem'
+import FeedContainer from '../containers/FeedContainer'
 
 const App = () => {
     return (
         <div>
             <h1>Tour du Suisse</h1>
-            <FeedList />
+            <FeedContainer />
         </div>
     );
 };

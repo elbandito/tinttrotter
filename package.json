@@ -12,6 +12,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "enzyme": "^2.9.1 ",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^20.0.4",
     "jest-cli": "^20.0.4",
     "nock": "^9.0.14",
@@ -40,5 +41,10 @@
   "scripts": {
     "start": "webpack-dev-server --progress --colors",
     "test": "jest --verbose"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "./src/__mocks__/styleMock.js"
+    }
   }
 }
