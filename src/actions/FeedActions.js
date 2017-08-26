@@ -23,10 +23,11 @@ const fetchFeedFailure = (ex) => {
     }
 };
 
-const fetchFeed = () => {
+const fetchFeed = (tint) => {
+    console.log(tint);
     return dispatch => {
         dispatch(fetchFeedRequest());
-        return fetch(`https://api.tintup.com/v1/feed/leysin?api_token=${API_KEY}`)
+        return fetch(`https://api.tintup.com/v1/feed/${tint}?api_token=${API_KEY}`)
             .then(res => res.json())
             .then(response => dispatch(fetchFeedSuccess(response.data)))
             .catch(ex => dispatch(fetchFeedFailure(ex)))

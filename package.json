@@ -22,6 +22,8 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
+    "css-loader": "^0.28.5",
+    "node-sass": "^4.5.3",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
@@ -29,7 +31,9 @@
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
+    "sass-loader": "^6.0.6",
     "semantic-ui-react": "^0.71.5",
+    "style-loader": "^0.18.2",
     "whatwg-fetch": "^2.0.3"
   },
   "scripts": {
