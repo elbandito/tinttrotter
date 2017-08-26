@@ -9,19 +9,19 @@ class FeedList extends React.Component {
 
     constructor(props) {
         super(props);
-
-        let timer = setInterval(this.tick, 1000);
+        this.tick = this.tick.bind(this);
 
         // Only set state directly in constructor.  For all other state mutations
         // use this.setState().
+        setInterval(this.tick, 1 * (60 * 1000));
         this.state = {
-            timer,
             counter: 0
         };
+
     }
 
     componentDidMount() {
-        this.props.fetchFeed('laschool');
+        this.props.fetchFeed('basel');
     }
 
     componentWillUnmount() {
@@ -29,6 +29,11 @@ class FeedList extends React.Component {
     }
 
     tick() {
+        const TINTS = ['aigle', 'vevey', 'zurich-ch', 'rhinefalls', 'bern', 'leysin', 'basel'];
+
+        let nextTintIndex = this.state.counter % TINTS.length;
+        this.props.fetchFeed(TINTS[nextTintIndex]);
+
         this.setState({
             counter: this.state.counter + 1
         });
@@ -50,14 +55,14 @@ class FeedList extends React.Component {
         };
 
         return (
-            <div className="feeds">
+            <div className='feeds'>
                 {
                     this.props.feed.map((item, index) =>
-                        <div key={`card-${index}`}>
+                        <div key={`card-${index}`} className='card_item'>
                             <Card
                                 image={image(item.image, item.url)}
                                 header={item.user_id}
-                                meta='Friend'
+                                meta='Enter meta here!'
                                 description={item.title}
                                 extra={user(item.author)}
                             /></div>)

@@ -5,7 +5,7 @@ import AddTodoItem from '../containers/AddTodoItem'
 const App = () => {
     return (
         <div>
-            <h1>Leysin Switzerland</h1>
+            <h1>Tour du Suisse</h1>
             <FeedList />
         </div>
     );

@@ -24,7 +24,6 @@ const fetchFeedFailure = (ex) => {
 };
 
 const fetchFeed = (tint) => {
-    console.log(tint);
     return dispatch => {
         dispatch(fetchFeedRequest());
         return fetch(`https://api.tintup.com/v1/feed/${tint}?api_token=${API_KEY}`)
