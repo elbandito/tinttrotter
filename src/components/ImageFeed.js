@@ -1,14 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Card, Icon, Image} from 'semantic-ui-react'
+import {Card, Image} from 'semantic-ui-react'
 
 import '../stylesheets/style.scss';
 
 class ImageFeed extends React.Component {
-
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         const image = (src, url) => (

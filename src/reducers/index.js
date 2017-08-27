@@ -1,5 +1,4 @@
-import { combineReducers, applyMiddleware } from 'redux'
-import thunk from 'redux-thunk'
+import { combineReducers } from 'redux'
 import feed from './FeedReducer'
 
 const Reducers = combineReducers({

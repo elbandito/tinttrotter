@@ -37,10 +37,12 @@
     "sass-loader": "^6.0.6",
     "semantic-ui-react": "^0.71.5",
     "style-loader": "^0.18.2",
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^2.0.3",
+    "react-scripts": "1.0.11"
   },
   "scripts": {
-    "start": "webpack-dev-server --progress --colors",
+    "dev": "webpack-dev-server --progress --colors",
+    "start": "react-scripts start",
     "test": "jest --verbose"
   },
   "jest": {

@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import {Card, Icon, Image} from 'semantic-ui-react'
 import SuisseMap from '../components/SuisseMap'
 import ImageFeed from '../components/ImageFeed'
 
@@ -17,7 +16,7 @@ class FeedContainer extends React.Component {
 
         // Only set state directly in constructor.  For all other state mutations
         // use this.setState().
-        setInterval(this.tick, 1 * (60 * 1000));
+        setInterval(this.tick, (30 * 1000));
         this.state = {
             counter: 0,
             location: {tint: 'basel', lat: 47.55, lng: 7.58}

@@ -7,10 +7,6 @@ import '../stylesheets/style.scss'
 
 class SuisseMap extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
 
         // Should be static - how?
