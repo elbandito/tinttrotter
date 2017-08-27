@@ -1,23 +1,15 @@
 import React from 'react'
-import TodoList from './TodoList'
-import FeedList from './FeedList'
-import AddTodoItem from '../containers/AddTodoItem'
-import {Card, Icon} from 'semantic-ui-react'
+import FeedContainer from '../containers/FeedContainer'
+import { Icon } from 'semantic-ui-react'
 
 const App = () => {
-    const extra = (
-        <a>
-            <Icon name='user' />
-            16 Friends
-        </a>
-    );
-
     return (
         <div>
-            <h1>Tint!</h1>
-            <AddTodoItem />
-            <FeedList />
-            <TodoList />
+            <div className='title'>
+                <h1>{'TINT Trotter: (Suisse|Schweiz|Svizzero) = '}</h1>
+                <Icon name='heart' color='red' size='huge' />
+            </div>
+            <FeedContainer />
         </div>
     );
 };

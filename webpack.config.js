@@ -28,6 +28,14 @@ module.exports = {
                     'react-hot-loader',
                     'babel-loader?presets[]=react,presets[]=es2015'
                 ]
+            },
+            {
+                test: /\.scss$/,
+                loaders: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
+                ]
             }
         ]
     },
