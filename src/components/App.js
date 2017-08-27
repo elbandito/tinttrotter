@@ -1,10 +1,14 @@
 import React from 'react'
 import FeedContainer from '../containers/FeedContainer'
+import { Icon } from 'semantic-ui-react'
 
 const App = () => {
     return (
         <div>
-            <h1>Tour du Suisse</h1>
+            <div className='title'>
+                <h1>{'TINT Trotter: (Suisse|Schweiz|Svizzero) = '}</h1>
+                <Icon name='heart' color='red' size='huge' />
+            </div>
             <FeedContainer />
         </div>
     );

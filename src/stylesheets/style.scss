@@ -1,10 +1,41 @@
-.feeds {
-  display: flex;
-  justify-content: center;
-  flex-flow: wrap;
+body {
+  background-color: aliceblue;
 }
 
-.card_item {
-  height: 15em;
-  width: 18em;
+.feed_container {
+  display: flex;
+  flex-flow: row-reverse;
+  padding-right: .5em;
+}
+
+.image_feed {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+  width: 65%;
+}
+
+.feed_item {
+  height: 8.5em;
+  width: 11em;
+}
+
+.large_map {
+  border: groove #f5e5e5;
+  width: 55em;
+  height: 30em;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  padding-top: .3em;
+  padding-bottom: .3em;
+
+  h1 {
+    padding-top: .2em;
+  }
+}
+
+.heart {
 }
