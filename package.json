@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "css-loader": "^0.28.5",
+    "express": "^4.15.4",
     "google-map-react": "^0.24.0",
     "node-sass": "^4.5.3",
     "prop-types": "^15.5.10",
@@ -31,18 +32,17 @@
     "react-dom": "^15.6.1",
     "react-image": "^1.0.1",
     "react-redux": "^5.0.6",
-    "react-simple-maps": "^0.8.0",
+    "react-scripts": "1.0.11",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
     "sass-loader": "^6.0.6",
     "semantic-ui-react": "^0.71.5",
     "style-loader": "^0.18.2",
-    "whatwg-fetch": "^2.0.3",
-    "react-scripts": "1.0.11"
+    "whatwg-fetch": "^2.0.3"
   },
   "scripts": {
     "dev": "webpack-dev-server --progress --colors",
-    "start": "react-scripts start",
+    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "jest --verbose"
   },
   "jest": {
