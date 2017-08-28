@@ -4,10 +4,12 @@ let path = require('path');
 module.exports = {
     devtool: 'inline-source-map',
     entry: [
-        'webpack-dev-server/client?http://127.0.0.1:' + (process.env.PORT || 8080),
         'webpack/hot/only-dev-server',
         './src'
     ],
+    devServer: {
+        port: (process.env.PORT || 8080)
+    },
     output: {
         path: path.join(__dirname, 'public'),
         filename: 'app.bundle.js'
