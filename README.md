@@ -1,29 +1,43 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Tint Trotter
 
-### What is this repository for? ###
+Simple React application that interfaces with the Tint API `/feed` endpoint for fetching social media
+feeds.  
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+For this specific application, Instagram feeds were targeted from all the places that I lived
+or frequently visited during my time living abroad in Switzerland. Each feed corresponds to a geography
+location on the map, as indicated by the pin icon.  As the pins travels from each location, the feeds will
+change to reflect the Instagram feeds from that region.
 
-### How do I get set up? ###
+## Purpose ##
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+I wrote this app for 4 reasons:
 
-### Contribution guidelines ###
+1. To learn more about Tint, it's API and account management
+2. Creating a good starting React app that gives examples of Redux, async calls, and testing.
+this app could act as a good seed app future projects.
+3. Brush-up on my React skills.
+4. Have fun building something that can remind me of beautiful places I lived and saw in CH. 
 
-* Writing tests
-* Code review
-* Other guidelines
+## Technology Stack ##
 
-### Who do I talk to? ###
+* React
+* Redux
+* scss
+* Jest (testing)
 
-* Repo owner or admin
-* Other community or team contact
+
+### Setup ###
+
+1. Install npm `brew install npm`
+2. Install yarn `npm install yarn`
+3. Install project dependencies `yarn install`
+4. Run local dev server `yarn dev`
+5. Open browser and navigate to `localhost:8080` 
+
+
+### NOTES ###
+
+* Fix container tests. The container tests are currently failing because I of an unmocked dependency on scss. 
+* Deploy to Heroku
