@@ -39,5 +39,5 @@ this app could act as a good seed app future projects.
 
 ### NOTES ###
 
-* Fix container tests. The container tests are currently failing because I of an unmocked dependency on scss. 
-* Deploy to Heroku
+* Fix container tests. The container tests are currently failing because I of an unmocked dependency on scss.
+* `No 'Access-Control-Allow-Origin' header is present on the requested resource` might show-up after deploying to Heroku.
