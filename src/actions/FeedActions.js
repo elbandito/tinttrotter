@@ -26,7 +26,7 @@ const fetchFeedFailure = (ex) => {
 const fetchFeed = (tint) => {
     return dispatch => {
         dispatch(fetchFeedRequest());
-        return fetch(`https://api.tintup.com/v1/feed/${tint}?api_token=${API_KEY}`)
+        return fetch(`https://api.tintup.com/v1/feed/${tint}?api_token=${API_KEY}`, {mode: 'no-cors'})
             .then(res => res.json())
             .then(response => dispatch(fetchFeedSuccess(response.data)))
             .catch(ex => dispatch(fetchFeedFailure(ex)))
