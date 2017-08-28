@@ -41,8 +41,9 @@
     "whatwg-fetch": "^2.0.3"
   },
   "scripts": {
+    "build": "webpack --config webpack.config.js",
     "dev": "webpack-dev-server --progress --colors",
-    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "start": "npm run build && NODE_ENV=production node server.js",
     "test": "jest --verbose"
   },
   "jest": {
