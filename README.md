@@ -37,7 +37,11 @@ this app could act as a good seed app future projects.
 5. Open browser and navigate to `localhost:8080` 
 
 
-### NOTES ###
+### Notes ###
 
 * Fix container tests. The container tests are currently failing because I of an unmocked dependency on scss.
 * `No 'Access-Control-Allow-Origin' header is present on the requested resource` might show-up after deploying to Heroku.
+
+
+### Known Issues ###
+* Need to add better error handing for async calls to Tint API
