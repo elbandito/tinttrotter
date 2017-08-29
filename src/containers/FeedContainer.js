@@ -24,7 +24,7 @@ class FeedContainer extends React.Component {
     }
 
     componentDidMount() {
-        let timer = setInterval(this.tick, (15 * 1000));
+        let timer = setInterval(this.tick, (10 * 1000));
         this.setState(Object.assign({timer: timer}, this.state));
 
         this.props.fetchFeed(this.state.location.tint);
