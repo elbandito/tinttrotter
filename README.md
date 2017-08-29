@@ -3,7 +3,7 @@
 Tint Trotter
 
 Simple React application that interfaces with the Tint API `/feed` endpoint for fetching social media
-feeds.  
+feeds.
 
 For this specific application, Instagram feeds were targeted from all the places that I lived
 or frequently visited during my time living abroad in Switzerland. Each feed corresponds to a geography
@@ -18,7 +18,7 @@ I wrote this app for 4 reasons:
 2. Creating a good starting React app that gives examples of Redux, async calls, and testing.
 this app could act as a good seed app future projects.
 3. Brush-up on my React skills.
-4. Have fun building something that can remind me of beautiful places I lived and saw in CH. 
+4. Have fun building something that can remind me of beautiful places I lived and saw in CH.
 
 ## Technology Stack ##
 
@@ -34,14 +34,12 @@ this app could act as a good seed app future projects.
 2. Install yarn `npm install yarn`
 3. Install project dependencies `yarn install`
 4. Run local dev server `yarn dev`
-5. Open browser and navigate to `localhost:8080` 
+5. Open browser and navigate to `localhost:8080`
 
 
 ### Notes ###
 
 * Fix container tests. The container tests are currently failing because I of an unmocked dependency on scss.
-* `No 'Access-Control-Allow-Origin' header is present on the requested resource` might show-up after deploying to Heroku.
-
 
 ### Known Issues ###
 * Need to add better error handing for async calls to Tint API
