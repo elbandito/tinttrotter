@@ -6,7 +6,7 @@ const App = () => {
     return (
         <div>
             <div className='title'>
-                <h1>{'TINT Trotter: (Suisse|Schweiz|Svizzero) = '}</h1>
+                <h1>{'Tint Globe Trotter: (Suisse|Schweiz|Svizzero) = '}</h1>
                 <Icon name='heart' color='red' size='huge' />
             </div>
             <FeedContainer />
