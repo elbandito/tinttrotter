@@ -16,15 +16,17 @@ class FeedContainer extends React.Component {
 
         // Only set state directly in constructor.  For all other state mutations
         // use this.setState().
-        setInterval(this.tick, (15 * 1000));
         this.state = {
             counter: 0,
-            location: {tint: 'basel', lat: 47.55, lng: 7.58}
+            location: {tint: 'basel', lat: 47.55, lng: 7.58},
+            timer: null
         };
-
     }
 
     componentDidMount() {
+        let timer = setInterval(this.tick, (5 * 1000));
+        this.setState(Object.assign({timer: timer}, this.state));
+
         this.props.fetchFeed(this.state.location.tint);
     }
 

@@ -21,13 +21,20 @@ class ImageFeed extends React.Component {
             );
         };
 
+        const description = (title) => {
+          return title.substr(0, 100);
+        };
+
         return (
             <div className="image_feed">
                 {
                     this.props.feed.map((item, index) =>
                         <div key={`card-${index}`} className='feed_item'>
-                            <Card image={image(item.image, item.url)}/>
-                        </div>)
+                            <Card
+                                image={image(item.image, item.url)}
+                                description={description(item.title)}
+                                className='card_item'
+                            /></div>)
                 }
             </div>
         );

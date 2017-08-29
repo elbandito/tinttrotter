@@ -6,7 +6,7 @@ class MapMarker extends React.Component {
 
     render() {
         return(
-            <div>
+            <div className='map_marker'>
                 <Icon name='marker' size='huge' color='red' />
             </div>
         )

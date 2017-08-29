@@ -4,7 +4,7 @@ body {
 
 .feed_container {
   display: flex;
-  flex-flow: row-reverse;
+  flex-flow: row;
   padding-right: .5em;
 }
 
@@ -16,8 +16,20 @@ body {
 }
 
 .feed_item {
-  height: 8.5em;
   width: 11em;
+}
+
+.card_item {
+  .content {
+    .description {
+      font-size: 10px;
+    }
+  }
+}
+
+.map_marker {
+  margin-top: -3.5em;
+  margin-left: -2.25em;
 }
 
 .large_map {
@@ -30,7 +42,7 @@ body {
   display: flex;
   justify-content: center;
   padding-top: .3em;
-  padding-bottom: .3em;
+  padding-bottom: 1em;
 
   h1 {
     padding-top: .2em;
